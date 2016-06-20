@@ -34,7 +34,7 @@ module JavaBuildpack
 
         system 'deb https://cran.cnr.berkeley.edu/bin/linux/ubuntu trusty/'
         system 'apt-get update'
-        system 'apt-get install r-base'
+        system 'apt-get -y --force-yes --no-install-recommends r-base'
 
 
         system 'ls'
