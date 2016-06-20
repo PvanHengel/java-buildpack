@@ -21,7 +21,7 @@ module JavaBuildpack
   module Framework
 
     # Encapsulates the functionality for contributing Java debug options to an application.
-    class Debug < JavaBuildpack::Component::BaseComponent
+    class RServer < JavaBuildpack::Component::BaseComponent
 
       # (see JavaBuildpack::Component::BaseComponent#detect)
       def detect
