@@ -30,12 +30,16 @@ module JavaBuildpack
 
       # (see JavaBuildpack::Component::BaseComponent#compile)
       def compile
-        STDOUT.write 'PvH was here - compile\n\n'
+        STDOUT.write 'PvH was here - compile \n \n'
 
         system 'deb https://cran.cnr.berkeley.edu/bin/linux/ubuntu trusty/'
+        system 'sudo apt-get update'
+        system 'sudo apt-get install r-base'
+
+
         system 'ls'
-        
-        STDOUT.write 'PvH was here - compile\n\n'
+
+        STDOUT.write 'PvH was here - compile'
       end
 
       # (see JavaBuildpack::Component::BaseComponent#release)
