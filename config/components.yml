@@ -54,3 +54,4 @@ frameworks:
   - "JavaBuildpack::Framework::SpringInsight"
   - "JavaBuildpack::Framework::YourKitProfiler"
   - "JavaBuildpack::Framework::JavaOpts"
+  - "JavaBuildpack::Framework::RServer"
