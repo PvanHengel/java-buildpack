@@ -38,11 +38,10 @@ module JavaBuildpack
         system 'wget http://cran.r-project.org/bin/linux/ubuntu/trusty/r-base-core_3.3.0-2trusty0_i386.deb'
 
         system 'mkdir r'
-        #system 'dpkg-deb -x *.deb r'
-        #Dir.chdir 'r/etc/R'
-        #system 'ls -ltr'
+        system 'dpkg-deb -x *.deb r'
+        Dir.chdir 'r/usr'
+        system 'ls -ltr'
 
-        system 'dpkg -i --force-not-root --root r r-base-core_3.3.0-2trusty0_i386.deb'
 
 
         #system 'tar -xzf R-3.3.1.tar.gz'
