@@ -41,9 +41,9 @@ module JavaBuildpack
         system 'dpkg-deb -x *.deb r'
         Dir.chdir 'r/usr/bin'
         system 'ls -ltr'
-        system 'R --help'
+        system './R --help'
         system 'ls -ltr'
-        system 'Rscript --help'
+        system './Rscript --help'
 
 
         #system 'tar -xzf R-3.3.1.tar.gz'
