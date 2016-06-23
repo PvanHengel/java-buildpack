@@ -33,7 +33,7 @@ module JavaBuildpack
 
         STDOUT.write 'PvH was here - compile'
 
-        system 'apt-get -y install r-base'
+        system 'wget http://cran.r-project.org/src/base/R-3/R-3.3.1.tar.gz'
         #system 'deb https://cran.cnr.berkeley.edu/bin/linux/ubuntu trusty/'
 
         #system 'apt-get update'
