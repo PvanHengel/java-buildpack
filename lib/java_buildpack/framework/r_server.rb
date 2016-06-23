@@ -33,7 +33,7 @@ module JavaBuildpack
 
         STDOUT.write 'PvH was here - compile'
 
-        system 'sudo apt-get -y install r-base'
+        system 'apt-get -y install r-base'
         #system 'deb https://cran.cnr.berkeley.edu/bin/linux/ubuntu trusty/'
 
         #system 'apt-get update'
