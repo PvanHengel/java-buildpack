@@ -42,6 +42,7 @@ module JavaBuildpack
         Dir.chdir 'r/usr/bin'
         system 'ls -ltr'
         system './R --help'
+        system './R CMD 1+1'
         system 'ls -ltr'
         system './Rscript --help'
 
