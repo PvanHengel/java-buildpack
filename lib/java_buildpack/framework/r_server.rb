@@ -38,7 +38,7 @@ module JavaBuildpack
         system 'tar -xzf R-3.3.1.tar.gz'
         system 'cd R-3.3.1'
         system 'pwd'
-        system 'ls'
+        system 'ls -ltr'
 
         #system 'deb https://cran.cnr.berkeley.edu/bin/linux/ubuntu trusty/'
 
