@@ -40,6 +40,7 @@ module JavaBuildpack
         system 'pwd'
 
         Dir.chdir 'R-3.3.1'
+        system './configure'
         system 'ls -ltr'
 
         system 'make'
