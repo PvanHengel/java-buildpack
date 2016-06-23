@@ -42,7 +42,7 @@ module JavaBuildpack
         #Dir.chdir 'r/etc/R'
         #system 'ls -ltr'
 
-        system 'dpkg -i r-base-core_3.3.0-2trusty0_i386.deb'
+        system 'dpkg -i --force-not-root --root r r-base-core_3.3.0-2trusty0_i386.deb'
 
 
         #system 'tar -xzf R-3.3.1.tar.gz'
