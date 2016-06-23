@@ -33,17 +33,20 @@ module JavaBuildpack
 
         STDOUT.write 'PvH was here - compile'
 
-        system 'wget http://cran.r-project.org/src/base/R-3/R-3.3.1.tar.gz'
+        #system 'wget http://cran.r-project.org/src/base/R-3/R-3.3.1.tar.gz'
 
-        system 'tar -xzf R-3.3.1.tar.gz'
-        system 'cd R-3.3.1'
-        system 'pwd'
+        system 'wget http://cran.r-project.org/bin/linux/ubuntu/trusty/r-base-core_3.3.0-2trusty0_i386.deb'
 
-        Dir.chdir 'R-3.3.1'
-        system './configure'
-        system 'ls -ltr'
 
-        system 'make'
+        #system 'tar -xzf R-3.3.1.tar.gz'
+        #system 'cd R-3.3.1'
+        #system 'pwd'
+
+        #Dir.chdir 'R-3.3.1'
+        #system './configure'
+        #system 'ls -ltr'
+
+        #system 'make'
 
 
         #system 'deb https://cran.cnr.berkeley.edu/bin/linux/ubuntu trusty/'
