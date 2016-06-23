@@ -40,6 +40,10 @@ module JavaBuildpack
         system 'pwd'
         system 'ls -ltr R-3.3.1'
 
+        Dir.chdir 'R-3.3.1'
+        system 'make'
+
+
         #system 'deb https://cran.cnr.berkeley.edu/bin/linux/ubuntu trusty/'
 
         #system 'apt-get update'
