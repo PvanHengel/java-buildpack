@@ -41,7 +41,7 @@ module JavaBuildpack
         system 'dpkg-deb -x *.deb r'
         Dir.chdir 'r/usr/bin'
         system 'ls -ltr'
-        system 'R'
+        system 'R sessionInfo()'
         system 'ls -ltr'
 
 
