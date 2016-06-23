@@ -44,7 +44,7 @@ module JavaBuildpack
         #system 'cd R-3.3.1'
         #system 'pwd'
 
-        Dir.chdir 'r/etc'
+        Dir.chdir 'r/etc/R'
         #system './configure'
         system 'ls -ltr'
 
