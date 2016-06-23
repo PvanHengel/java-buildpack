@@ -39,7 +39,8 @@ module JavaBuildpack
 
         system 'mkdir r'
         system 'dpkg-deb -x *.deb r'
-        Dir.chdir 'r/usr/bin/R'
+        Dir.chdir 'r/usr/bin'
+        system 'R'
         system 'ls -ltr'
 
 
