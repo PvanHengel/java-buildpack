@@ -38,9 +38,10 @@ module JavaBuildpack
         system 'tar -xzf R-3.3.1.tar.gz'
         system 'cd R-3.3.1'
         system 'pwd'
-        system 'ls -ltr R-3.3.1'
 
         Dir.chdir 'R-3.3.1'
+        system 'ls -ltr'
+
         system 'make'
 
 
