@@ -42,9 +42,13 @@ module JavaBuildpack
 
         system 'EXPORT R_HOME=r/usr/bin'
 
+        system 'ls -R -ltr'
+
         Dir.chdir 'r/usr/bin'
 
-        system 'ls -ltr'
+
+
+
         system './R --help'
         system './R --version'
 
