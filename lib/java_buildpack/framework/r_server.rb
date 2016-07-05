@@ -48,7 +48,7 @@ module JavaBuildpack
 
         Dir.chdir ARGV[0]+'/vendor/R/usr/bin'
 
-        system './R CMD --version'
+        system './R ''Sys.setenv('''+ARGV[0]+'/vendor/R/usr/bin'')'''
 
 
 
