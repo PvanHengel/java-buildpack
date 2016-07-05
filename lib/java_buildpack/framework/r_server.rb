@@ -31,31 +31,22 @@ module JavaBuildpack
       # (see JavaBuildpack::Component::BaseComponent#compile)
       def compile
 
-        STDOUT.write 'PvH was here - compile'
-
         #system 'wget http://cran.r-project.org/src/base/R-3/R-3.3.1.tar.gz'
 
         system 'wget http://cran.r-project.org/bin/linux/ubuntu/trusty/r-base-core_3.3.0-2trusty0_i386.deb'
-
         system 'mkdir r'
         system 'dpkg-deb -x *.deb r'
 
-        system 'EXPORT R_HOME=r/usr/bin'
-
-        system 'ls -R -ltr'
-
+        # system 'ls -R -ltr'
         Dir.chdir 'r/usr/bin'
 
-
-
-
         system './R --help'
+
         system './R --version'
 
         system './R CMD 1+1'
 
         system 'ls -ltr'
-
 
         system './Rscript --help'
 
