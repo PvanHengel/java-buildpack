@@ -37,45 +37,13 @@ module JavaBuildpack
         system 'mkdir r'
         system 'dpkg-deb -x *.deb r'
 
-        system 'echo pwd'
-
         system 'ls -R -ltr'
 
         Dir.chdir 'r/usr/bin'
 
-        system './R --help'
-
         system './R --version'
 
-        system './R CMD 1+1'
 
-        system 'ls -ltr'
-
-        system './Rscript --help'
-
-
-        #system 'tar -xzf R-3.3.1.tar.gz'
-        #system 'cd R-3.3.1'
-        #system 'pwd'
-
-
-        #system './configure'
-        system 'ls -ltr'
-
-        #system 'make'
-
-
-        #system 'deb https://cran.cnr.berkeley.edu/bin/linux/ubuntu trusty/'
-
-        #system 'apt-get update'
-        STDOUT.write 'PvH was here - compile 2'
-
-        #system 'apt-get -y --force-yes --no-install-recommends r-base'
-
-
-        #system 'ls'
-
-        STDOUT.write 'PvH was here - compile'
       end
 
       # (see JavaBuildpack::Component::BaseComponent#release)
