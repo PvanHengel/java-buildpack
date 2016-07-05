@@ -40,10 +40,16 @@ module JavaBuildpack
         system 'mkdir r'
         system 'dpkg-deb -x *.deb r'
         Dir.chdir 'r/usr/bin'
+
         system 'ls -ltr'
         system './R --help'
+        system './R --version'
+
         system './R CMD 1+1'
+
         system 'ls -ltr'
+
+
         system './Rscript --help'
 
 
