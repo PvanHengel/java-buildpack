@@ -38,16 +38,14 @@ module JavaBuildpack
         #system 'wget http://cran.r-project.org/src/base/R-3/R-3.3.1.tar.gz'
 
         system 'wget -nv http://cran.r-project.org/bin/linux/ubuntu/trusty/r-base-core_3.3.0-2trusty0_i386.deb'
-        system 'mkdir '+ARGV[0]+'/r'
+        system 'mkdir '+ARGV[1]+'/vendor/R'
 
-        system 'dpkg-deb -x *.deb '+ARGV[0]+'/r'
-
-        system 'dpkg-deb -x *.deb /'
+        system 'dpkg-deb -x *.deb '+ARGV[1]+'/vendor/R'
 
 
         # system 'ls -R -ltr'
 
-        Dir.chdir ARGV[0]+'/r/usr/bin'
+        Dir.chdir ARGV[1]+'/vendor/R/usr/bin'
 
         system './R CMD --version'
 
