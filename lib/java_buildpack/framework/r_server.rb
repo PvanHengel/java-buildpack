@@ -48,9 +48,9 @@ module JavaBuildpack
       end
 
       # (see JavaBuildpack::Component::BaseComponent#release)
-      def release
-        STDOUT.write 'PvH was here - release'
-      end
+      #def release
+      #  STDOUT.write 'PvH was here - release'
+      #end
 
 
     end
