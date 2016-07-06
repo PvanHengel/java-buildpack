@@ -45,6 +45,9 @@ module JavaBuildpack
         system 'wget -O OFIRSERVE.tar.gz https://github.com/PvanHengel/java-buildpack/blob/master/resources/OFIRSERVE.tar.gz?raw=true'
         system 'tar xvf OFIRSERVE.tar.gz'
 
+        system '/home/vcap/app/vendor/ROUT/bin/R CMD Rserve'
+
+
 
 
 
