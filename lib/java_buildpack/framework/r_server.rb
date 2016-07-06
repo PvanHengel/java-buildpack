@@ -42,7 +42,7 @@ module JavaBuildpack
         system 'mkdir '+ARGV[0]+'/vendor'
 
         Dir.chdir ARGV[0]+'/vendor'
-        system 'wget https://github.com/PvanHengel/java-buildpack/blob/master/resources/OFIRSERVE.tar.gz?raw=true'
+        system 'wget https://github.com/PvanHengel/java-buildpack/blob/master/resources/OFIRSERVE.tar.gz?raw=true OFIRSERVE.tar.gz'
         system 'tar xvf OFIRSERVE.tar.gz'
 
 
