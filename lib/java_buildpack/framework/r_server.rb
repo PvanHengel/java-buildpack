@@ -31,24 +31,20 @@ module JavaBuildpack
       # (see JavaBuildpack::Component::BaseComponent#compile)
       def compile
 
-        puts("TEST0: " + ARGV[0])
+        #puts("TEST0: " + ARGV[0])
 
-        puts("TEST1: " + ARGV[1])
+        #puts("TEST1: " + ARGV[1])
 
         #system 'wget http://cran.r-project.org/src/base/R-3/R-3.3.1.tar.gz'
 
-        system 'wget -nv http://cran.r-project.org/bin/linux/ubuntu/trusty/r-base-core_3.3.0-2trusty0_i386.deb'
+        #system 'wget -nv http://cran.r-project.org/bin/linux/ubuntu/trusty/r-base-core_3.3.0-2trusty0_i386.deb'
+
         system 'mkdir '+ARGV[0]+'/vendor'
-        system 'mkdir '+ARGV[0]+'/vendor/R'
 
-        system 'dpkg-deb -x *.deb '+ARGV[0]+'/vendor/R'
+        Dir.chdir ARGV[0]+'/vendor'
+        system 'wget http://nvdrinfa1/data/SrcFiles/RISK_ODS/data/pvh/OFIRSERVE.tar.gz'
+        system 'tar xvf OFIRSERVE.tar.gz'
 
-
-        # system 'ls -R -ltr'
-
-        Dir.chdir ARGV[0]+'/vendor/R/usr/bin'
-
-        system './R ''Sys.setenv('''+ARGV[0]+'/vendor/R/usr/bin'')'''
 
 
 
