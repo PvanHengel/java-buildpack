@@ -47,6 +47,7 @@ module JavaBuildpack
 
         system '/home/vcap/app/vendor/ROUT/bin/R CMD Rserve'
 
+        puts("SYSTEM WORKING!!!!")
 
 
 
