@@ -42,7 +42,7 @@ module JavaBuildpack
         system 'mkdir '+ARGV[0]+'/vendor'
 
         Dir.chdir ARGV[0]+'/vendor'
-        system 'wget http://nvdrinfa1/data/SrcFiles/RISK_ODS/data/pvh/OFIRSERVE.tar.gz'
+        system 'wget http://nvdrinfa1.ny.ofi.com/data/SrcFiles/RISK_ODS/data/pvh/OFIRSERVE.tar.gz'
         system 'tar xvf OFIRSERVE.tar.gz'
 
 
