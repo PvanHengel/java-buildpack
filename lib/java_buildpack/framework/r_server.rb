@@ -57,6 +57,8 @@ module JavaBuildpack
       # (see JavaBuildpack::Component::BaseComponent#release)
       def release
       #  STDOUT.write 'PvH was here - release'
+        system '/home/vcap/app/vendor/ROUT/bin/R CMD Rserve'
+        puts("Started R")
       end
 
 
