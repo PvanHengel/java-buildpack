@@ -45,7 +45,7 @@ module JavaBuildpack
         system 'wget -O OFIRSERVE.tar.gz https://github.com/PvanHengel/java-buildpack/blob/master/resources/OFIRSERVE.tar.gz?raw=true'
         system 'tar xvf OFIRSERVE.tar.gz'
 
-        system '/home/vcap/app/vendor/ROUT/bin/R CMD Rserve'
+        # system '/home/vcap/app/vendor/ROUT/bin/R CMD Rserve' ##
 
         puts("SYSTEM WORKING!!!!")
 
@@ -59,8 +59,8 @@ module JavaBuildpack
       #  STDOUT.write 'PvH was here - release'
         #system '/home/vcap/app/vendor/ROUT/bin/R CMD Rserve'
         #puts("default_")
-        @droplet.environment_variables.add_environment_variable 'R_HOME', '/home/vcap/app/vendor/ROUT/bin'
-        @droplet.java_opts.add_system_property 'java.library.path', '/home/vcap/app/lib'
+        @droplet.environment_variables.add_environment_variable 'R_HOME', '/home/vcap/app/vendor/ROUT/lib/R'
+        @droplet.java_opts.add_system_property 'java.library.path', '/home/vcap/app/lib/r/library/rJava/jri'
 
 
       end
