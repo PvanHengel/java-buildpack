@@ -60,6 +60,7 @@ module JavaBuildpack
         #system '/home/vcap/app/vendor/ROUT/bin/R CMD Rserve'
         #puts("default_")
         @droplet.environment_variables.add_environment_variable 'R_HOME', '/home/vcap/app/vendor/ROUT/lib/R'
+        @droplet.environment_variables.add_environment_variable 'LD_LIBRARY_PATH' '/home/vcap/app/vendor/ROUT/lib/R/lib'
         @droplet.java_opts.add_system_property 'java.library.path', '/home/vcap/app/vendor/ROUT/lib/R/library/rJava/jri'
 
 
